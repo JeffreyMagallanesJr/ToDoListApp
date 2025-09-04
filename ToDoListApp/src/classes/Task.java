@@ -53,7 +53,7 @@ public class Task {
     public String toString() {
         return "Task ID: " + id +
                ", Description: " + description +
-               ", Deadline: " + deadline +
+               ", Deadline: " + (deadline != null ? deadline : "Not set") +
                ", Completed: " + (isCompleted ? "Yes" : "No");
     }
 }
