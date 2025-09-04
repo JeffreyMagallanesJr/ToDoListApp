@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class App {
     private static TaskManager taskManager = new TaskManager();
-    private static Fibonacci fibonacci = new Fibonacci();
+    
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the To-Do List App!");
+        
         while (true) {
+            System.out.println("\n\nWelcome to the To-Do List App!");
             System.out.println("\nOptions:");
             System.out.println("1. Add a new task");
             System.out.println("2. View all tasks");
@@ -33,7 +34,13 @@ public class App {
                     completeTask(scanner);
                     break;
                 case 4:
-                    fibonacci();
+                    
+                    System.out.println("=========== [Welcome to Fibonacci] ===========");
+                    System.out.print("Input number of elements: ");
+                    int fibonacciSize = scanner.nextInt();
+                    scanner.nextLine();
+                    final Fibonacci fibonacci = new Fibonacci(fibonacciSize);
+                    fibonacci.displayResult();
                     break;
                 case 5:
                     System.out.println("Exiting the app. Goodbye!");
@@ -65,4 +72,5 @@ public class App {
             System.out.println("Task not found.");
         }
     }
+    
 }

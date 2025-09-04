@@ -2,28 +2,29 @@ package classes;
 
 
 public class Fibonacci {
-    public Fibonacci() {
-        super();
-    }
     /**
      * @param args
      * */
-    public static void main(final String[] args) {
-        final int maxSize = 10;
-        for (int i = 0; i < maxSize; i++) {
-            System.out.println(fibonacci(i));
+    private int maxSize;
+    
+    public Fibonacci (int size) {
+        this.maxSize = size;
+    }
+    
+    public void displayResult () {
+        for (int i = 0; i < this.maxSize; i++) {
+            System.out.println(fibonacciProcess(i));
         }
 }
     /**
      * @param num holds the position
      * @return num || return fibonacci(num - 1) + fibonacci(num - 2)
      * */
-    public static int fibonacci(final int num) {
-        if (num <= 1) {
-            return num;
+    public static int fibonacciProcess(final int position) {
+        if (position <= 1) {
+            return position;
         } else {
-            return fibonacci(num - 1) + fibonacci(num - 2);
+            return fibonacciProcess(position - 1) + fibonacciProcess(position - 2);
         }
     }
-
 }
