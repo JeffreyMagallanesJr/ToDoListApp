@@ -13,7 +13,12 @@ public class Fibonacci {
     
     public void displayResult () {
         for (int i = 0; i < this.maxSize; i++) {
-            System.out.println(fibonacciProcess(i));
+            if (i == (this.maxSize - 1)) {
+                System.out.print(fibonacciProcess(i));
+            } else {
+                System.out.print(fibonacciProcess(i) + ", ");
+            }
+            
         }
 }
     /**
