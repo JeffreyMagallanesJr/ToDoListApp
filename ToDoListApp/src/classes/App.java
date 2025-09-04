@@ -35,7 +35,7 @@ public class App {
                     break;
                 case 4:
                     
-                    System.out.println("=========== [Welcome to Fibonacci] ===========");
+                    System.out.println("\n\n=========== [Welcome to Fibonacci] ===========");
                     System.out.print("Input number of elements: ");
                     int fibonacciSize = scanner.nextInt();
                     scanner.nextLine();

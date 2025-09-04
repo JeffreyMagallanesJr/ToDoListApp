@@ -17,8 +17,8 @@ public class Fibonacci {
         }
 }
     /**
-     * @param num holds the position
-     * @return num || return fibonacci(num - 1) + fibonacci(num - 2)
+     * @param position holds the position
+     * @return position || return fibonacci(position - 1) + fibonacci(position - 2)
      * */
     public static int fibonacciProcess(final int position) {
         if (position <= 1) {
